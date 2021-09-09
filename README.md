@@ -19,7 +19,7 @@ Fastjson已经连续几次爆出高危漏洞，由于目前使用范围较广，
 移除fastjson包依赖，并引用json-facade包依赖
 ```
 <dependency>
-  <groupId>com.jd.jframe</groupId>
+  <groupId>com.jframe</groupId>
   <artifactId>json-facade</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 </dependency>
@@ -27,11 +27,11 @@ Fastjson已经连续几次爆出高危漏洞，由于目前使用范围较广，
 
 ### 3.2 全局替换类引用
 ```
-com.alibaba.fastjson.JSON 替换为 JSON
+com.alibaba.fastjson.JSON 替换为 com.jframe.json.JSON
 
-com.alibaba.fastjson.JSONArray 替换为 JSONArray
+com.alibaba.fastjson.JSONArray 替换为 com.jframe.json.JSONArray
 
-com.alibaba.fastjson.JSONObject 替换为 JSONObject
+com.alibaba.fastjson.JSONObject 替换为 com.jframe.json.JSONObject
 
 com.alibaba.fastjson.TypeReference 替换为 com.fasterxml.jackson.core.type.TypeReference
 ```
