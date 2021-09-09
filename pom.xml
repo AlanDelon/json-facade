@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.jd.jframe</groupId>
+  <artifactId>json-facade</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+
+  <name>json-facade</name>
+
+  <properties>
+    <java_source_version>1.8</java_source_version>
+    <java_target_version>1.8</java_target_version>
+    <compiler_version>1.8</compiler_version>
+    <jackson.version>2.11.2</jackson.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>${java_source_version}</source>
+          <target>${java_target_version}</target>
+          <compilerVersion>${compiler_version}</compilerVersion>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.4.2</version>
+        <configuration>
+          <skipTests>true</skipTests>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <distributionManagement>
+    <repository>
+      <id>jd-central</id>
+      <name>libs-releases</name>
+      <url>http://artifactory.jd.com/libs-releases-local</url>
+    </repository>
+    <snapshotRepository>
+      <id>jd-snapshots</id>
+      <name>libs-snapshots</name>
+      <url>http://artifactory.jd.com/libs-snapshots-local</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>
