@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 /**
  * @author jiangjian45
- * @date 2021/9/8 16:34
+ * Created at 2021/9/8 16:34
  */
 public class TypeUtils {
     private static final Pattern NUMBER_WITH_TRAILING_ZEROS_PATTERN = Pattern.compile("\\.0*$");
