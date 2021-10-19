@@ -216,6 +216,11 @@ public class JSONArray extends JSON implements List<Object>, Cloneable, RandomAc
     }
 
     @Override
+    public String toString() {
+        return toJSONString();
+    }
+
+    @Override
     public int size() {
         return list.size();
     }
